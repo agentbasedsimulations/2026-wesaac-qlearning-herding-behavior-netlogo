@@ -7,9 +7,9 @@ This repository contains two NetLogo simulations that apply Q-Learning to the cl
 plain
 
 ├── static-herding/   
-│   └── qlearning-static.nlogo      # Single sheep, fixed spawn, stationary target  
+│   └── Sheepherding-Simulation-Static.nlogo      # Single sheep, fixed spawn, stationary target  
 ├── dynamic-herding/  
-│   └── qlearning-dynamic.nlogo     # Multiple sheep, random spawn, moving targets  
+│   └── Sheepherding-Simulation-Dynamic.nlogo     # Multiple sheep, random spawn, moving targets  
 └── README.md  
 
 🧠 What is Q-Learning Herding?
