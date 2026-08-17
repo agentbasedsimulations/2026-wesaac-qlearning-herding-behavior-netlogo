@@ -1,4 +1,15 @@
-Q-Learning Sheep Herding in NetLogo
+<h1 align="center">Applying Q-Learning to Herding Behavior: A Single-Agent Approach in NetLogo</h1>
+
+<h3 align="center">Bernardo A. Santos, Fernando Santos</h3>
+
+<p align="center">
+  Departamento de Engenharia de Software<br>
+  Universidade do Estado de Santa Catarina (UDESC)<br>
+  Ibirama – SC – Brazil<br>
+  <code>bernardo.santos@edu.udesc.br</code>, <code>fernando.santos@edu.udesc.br</code>
+</p>
+
+<h2>Q-Learning Sheep Herding in NetLogo</h2>
 
 Agent-based simulation of autonomous herding using reinforcement learning — no pre-programmed heuristics, just spatial Q-Learning.
 This repository contains two NetLogo simulations that apply Q-Learning to the classic sheep herding problem. A single dog agent learns to guide sheep toward a target gate by discovering spatial rules through trial and error, using a low-complexity discrete state space based on relative distance, angle, and alignment.
@@ -12,7 +23,7 @@ plain
 │    
 └── README.md  
 
-🧠 What is Q-Learning Herding?
+<h2>🧠 What is Q-Learning Herding?</h2>
 
 The herding problem is a classic benchmark in autonomous control and multi-agent systems. The challenge lies in indirectly manipulating a non-cooperative agent (the sheep) through a driving agent (the dog). The dog cannot simply walk to the gate—it must learn to position itself behind the sheep, aligned with the gate, at exactly the right distance to trigger the sheep's flight response in the desired direction.
 Instead of hard-coding these geometric rules, the dog agent learns them autonomously by:
@@ -21,7 +32,7 @@ Choosing from five discrete actions (move forward, turn left, turn right, orbit,
 Receiving shaped rewards based on progress toward the gate
 Updating a Q-table via the Bellman equation
 
-📊 Simulations
+<h2>📊 Simulations</h2>
 
 1. Static Herding
 
@@ -45,7 +56,7 @@ Convergence	Slower and noisier, but demonstrates robust generalization
 Best for: Evaluating policy stability under varying environmental complexity and testing whether the agent can adapt its strategy to new spatial configurations on the fly.
 What to notice: The cumulative completed-episodes plot trends upward linearly despite randomness, confirming the Q-matrix adapts without catastrophic forgetting.
 
-🎮 How to Use
+<h2>🎮 How to Use</h2>
 
 Install NetLogo (version 6.x recommended).  
 Open either .nlogo file.  
@@ -67,7 +78,7 @@ Completed Episodes: Cumulative successes over total simulation ticks
 Average Steps (per 1,000 episodes): Measures path efficiency   
 Average Reward (per 1,000 episodes): Measures policy quality   
 
-⚙️ State, Action & Reward Design
+<h2>⚙️ State, Action & Reward Design</h2>
 
 State Space (2 × 8 × 4 = 64 states)  
 Distance: near / far relative to the sheep's perception zone  
@@ -89,7 +100,7 @@ Dog too far from sheep (>7 patches)	−0.5
 Time penalty (every step)	−0.1  
 Dog stuck / oscillating	−1  
 
-🔬 Hyperparameters
+<h2>🔬 Hyperparameters</h2>
 
 Parameter	Value	Description  
 Learning Rate (α)	0.4	Balance between new and past experience  
@@ -98,7 +109,7 @@ Initial Epsilon (ε)	0.5	Initial exploration probability
 Epsilon Decay	0.9994	Gradual shift from exploration to exploitation  
 These values were empirically tuned using NetLogo's BehaviorSpace.  
 
-📈 Expected Results
+<h2>📈 Expected Results</h2>
 
 Metric	Static	Dynamic
 
@@ -106,7 +117,7 @@ Steps trend	Rapid flatline at minimum	Gradual decline to stable baseline
 Reward trend	Rapid flatline near maximum	Stabilization after initial volatility  
 Policy behavior	Identical trajectory every episode	Adaptive path per spawn configuration  
 
-📚 References
+<h2>📚 References</h2>
 
 This project is based on:
 Applying Q-Learning to Herding Behavior: A Single-Agent Approach in NetLogo (2026)
@@ -118,5 +129,5 @@ Strömbom, D., et al. (2014). Solving the shepherding problem. Proceedings of th
 Lien, J.-M., et al. (2004). Shepherding behaviors with multiple shepherds. IEEE International Conference on Robotics and Automation (ICRA).  
 Macal, C. M., & North, M. J. (2010). Tutorial on agent-based modelling and simulation. Journal of Simulation, 4(3), 151–162.  
 
-📄 License
+<h2>📄 License</h2>
 This project is provided for academic and educational purposes. Please cite the original paper if you use or extend this work.
