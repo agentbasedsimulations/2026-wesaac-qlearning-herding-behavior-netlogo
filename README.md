@@ -23,7 +23,7 @@ Updating a Q-table via the Bellman equation
 
 📊 Simulations
 
-1. Static Herding (qlearning-static.nlogo)
+1. Static Herding
 
 Feature	Description  
 Sheep	1, completely stationary  
@@ -34,7 +34,7 @@ Convergence	Very fast — optimal policy learned in a few thousand episodes
 Best for: Understanding the core Q-Learning mechanics and verifying that the state-action abstraction works correctly before adding complexity.
 What to notice: The steps-per-episode and reward plots flatline quickly. Once trained, the dog repeats the exact same efficient trajectory every time.
 
-2. Dynamic Herding (qlearning-dynamic.nlogo)
+2. Dynamic Herding
 
 Feature	Description  
 Sheep	Multiple (configurable)  
